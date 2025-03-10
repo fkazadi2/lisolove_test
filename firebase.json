@@ -1,0 +1,48 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "lisolove-8bf12",
+          "appId": "1:244549155330:android:2c11692cbd7d905c9e051b",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "lisolove-8bf12",
+          "appId": "1:244549155330:ios:56040ffccbcc383d9e051b",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "lisolove-8bf12",
+          "appId": "1:244549155330:ios:56040ffccbcc383d9e051b",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "lisolove-8bf12",
+          "configurations": {
+            "android": "1:244549155330:android:2c11692cbd7d905c9e051b",
+            "ios": "1:244549155330:ios:56040ffccbcc383d9e051b",
+            "macos": "1:244549155330:ios:56040ffccbcc383d9e051b",
+            "web": "1:244549155330:web:e8ed761896af4d419e051b",
+            "windows": "1:244549155330:web:952b408338414f929e051b"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

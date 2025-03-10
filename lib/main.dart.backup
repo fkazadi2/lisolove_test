@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+import 'services/auth_provider.dart';
+import 'screens/welcome_screen.dart';
+
+// Importez le fichier firebase_options.dart qui sera généré par flutterfire
+// import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialisez Firebase
+  // Cette ligne sera à décommenter après avoir exécuté flutterfire configure
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Pour le moment, initialisons Firebase sans options spécifiques
+  await Firebase.initializeApp();
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AuthProvider(),
+      child: const LisoloveApp(),
+    ),
+  );
+}
+
+class LisoloveApp extends StatelessWidget {
+  const LisoloveApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Lisolove',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.red,
+          secondary: Colors.pink,
+        ),
+        useMaterial3: true,
+        fontFamily: 'Roboto',
+      ),
+      home: const WelcomeScreen(),
+    );
+  }
+}
